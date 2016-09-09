@@ -32,4 +32,5 @@ public class EventTest {
       Event testEvent = new Event(20, "Sushi", "Beer", "Live Band");
       assertEquals("Live Band", testEvent.getTypeEntertainment());
     }
+    
 }
