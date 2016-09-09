@@ -21,11 +21,11 @@ public class Event {
   }
 
   public String getTypeDrink() {
-    return "Beer";
+    return typeDrink;
   }
 
-  // public String getTypeEntertainment() {
-  //   return typeEntertainment;
-  // }
+  public String getTypeEntertainment() {
+    return "DJ";
+  }
 
 }
