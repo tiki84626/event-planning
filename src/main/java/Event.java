@@ -13,13 +13,13 @@ public class Event {
   }
 
   public int getNumberGuests() {
-    return 10;
+    return numberGuests;
   }
 
-  // public String getTypeFood() {
-  //   return typeFood;
-  // }
-  //
+  public String getTypeFood() {
+    return "Grill";
+  }
+
   // public String getTypeDrink() {
   //   return typeDrink;
   // }
