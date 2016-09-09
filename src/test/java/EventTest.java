@@ -10,9 +10,15 @@ public class EventTest {
     }
 
     @Test
-    public void newEvent_getsNumberGuests_10() {
+    public void newEvent_getsNumberGuests_Int() {
       Event testEvent = new Event(20, "Sushi", "Beer", "Live Band");
       assertEquals(20, testEvent.getNumberGuests());
     }
+
+    // @Test
+    // public void newEvent_getsTypeFood_String() {
+    //   Event testEvent = new Event(20, "Sushi", "Beer", "Live Band");
+    //   assertEquals("Grill", testEvent.getTypeFood());
+    // }
 
 }
