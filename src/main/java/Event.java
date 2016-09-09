@@ -17,13 +17,13 @@ public class Event {
   }
 
   public String getTypeFood() {
-    return "Grill";
+    return typeFood;
   }
 
-  // public String getTypeDrink() {
-  //   return typeDrink;
-  // }
-  //
+  public String getTypeDrink() {
+    return "Beer";
+  }
+
   // public String getTypeEntertainment() {
   //   return typeEntertainment;
   // }
