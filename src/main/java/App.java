@@ -22,6 +22,5 @@ public class App {
 
     Event userEvent = new Event(numberGuests, stringTypeFood, stringTypeDrink, stringTypeEntertainment);
 
-    
   }
 }
