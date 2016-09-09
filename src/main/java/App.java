@@ -29,10 +29,20 @@ public class App {
     // isCorrectType(typesFood, "food", stringTypeFood);
 
 
-
     System.out.println("What type of drinks would you like to serve at your event? Choose from the following: Beer, Cocktails, or Soda.");
     String stringTypeDrink = myConsole.readLine();
     List<String> typesDrink = asList("Beer", "Cocktails", "Soda");
+
+    if (!typesDrink.contains(stringTypeDrink)) {
+      boolean typeOfDrink = false;
+      while (!typeOfDrink) {
+        System.out.println("Please select a type of food from the above list.");
+        String stringNewFood = myConsole.readLine();
+        if (typesFood.contains(stringNewFood)) {
+          typeOfFood = true;
+        }
+      }
+    }
 
     System.out.println("What type of entertainment would you like to have at your event? Please choose one of the following: Live Band, DJ, or None");
     String stringTypeEntertainment = myConsole.readLine();
