@@ -16,4 +16,16 @@ public class Event {
     return numberGuests;
   }
 
+  public String getTypeFood() {
+    return typeFood;
+  }
+
+  public String getTypeDrink() {
+    return typeDrink;
+  }
+
+  public String getTypeEntertainment() {
+    return typeEntertainment;
+  }
+
 }
