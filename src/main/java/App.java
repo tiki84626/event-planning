@@ -28,7 +28,10 @@ public class App {
 
     Event userEvent = new Event(numberGuests, stringTypeFood, stringTypeDrink, stringTypeEntertainment);
 
-    System.out.println(userEvent.getTypeFood());
+    int eventCost = Event.calculateEventCost(userEvent.getNumberGuests(), userEvent.getTypeFood(), userEvent.getTypeDrink(), userEvent.getTypeEntertainment());
+
+    System.out.println("\nYour total cost is $" + eventCost + ".00.\n");
+
 
   }
 }

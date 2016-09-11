@@ -2,6 +2,8 @@ import java.io.Console;
 import java.util.List;
 import java.util.ArrayList;
 import static java.util.Arrays.asList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Event {
 
@@ -9,6 +11,7 @@ public class Event {
   private String typeFood;
   private String typeDrink;
   private String typeEntertainment;
+  private int totalCost;
 
 
   public Event(int guests, String food, String drink, String entertainment) {
@@ -47,6 +50,24 @@ public class Event {
       }
     }
     return input;
+  }
+
+  public static int calculateEventCost(int guests, String food, String drink, String entertainment) {
+    Map<String, Integer> typeValues = new HashMap<String, Integer>();
+    typeValues.put("Sushi", 9);
+    typeValues.put("Vegan", 6);
+    typeValues.put("Grill", 5);
+    typeValues.put("Sandwiches", 3);
+    typeValues.put("Beer", 2);
+    typeValues.put("Cocktails", 3);
+    typeValues.put("Soda", 1);
+    typeValues.put("Live Band", 100);
+    typeValues.put("DJ", 50);
+    typeValues.put("None", 0);
+
+    int totalCost = (guests * typeValues.get(food)) + (guests * typeValues.get(drink)) + typeValues.get(entertainment);
+
+    return totalCost;
   }
 
 
