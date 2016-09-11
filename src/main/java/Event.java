@@ -1,3 +1,4 @@
+import java.io.Console;
 import java.util.List;
 import java.util.ArrayList;
 import static java.util.Arrays.asList;
@@ -33,19 +34,20 @@ public class Event {
     return typeEntertainment;
   }
 
-  // This is an attempt to create a method for running the loop.
-  // public static isCorrectType(List<String> types, String type, String input) {
-  //   if (!types.contains(input)) {
-  //     boolean typeBoolean = false;
-  //     while (!typeBoolean) {
-  //       System.out.println("Please select a type of " + type + " from the above list.");
-  //       String stringNewType = myConsole.readLine();
-  //       if (types.contains(stringNewType)) {
-  //         typeBoolean = true;
-  //       }
-  //     }
-  //   }
-  // }
+  public static String isCorrectType(List<String> types, String type, String input) {
+    Console myConsole = System.console();
+    if (!types.contains(input)) {
+      boolean typeBoolean = false;
+      while (!typeBoolean) {
+        System.out.println("Please select a type of " + type + " from the above list.");
+        input = myConsole.readLine();
+        if (types.contains(input)) {
+          typeBoolean = true;
+        }
+      }
+    }
+    return input;
+  }
 
 
 }
