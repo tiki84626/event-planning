@@ -32,5 +32,11 @@ public class EventTest {
       Event testEvent = new Event(20, "Sushi", "Beer", "Live Band");
       assertEquals("Live Band", testEvent.getTypeEntertainment());
     }
-    
+
+    @Test
+    public void newEvent_getsTotalCostOfEvent_Int() {
+      Event testEvent = new Event(20, "Sushi", "Beer", "Live Band");
+      assertEquals(320, Event.calculateEventCost(20, "Sushi", "Beer", "Live Band"));
+    }
+
 }
